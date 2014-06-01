@@ -21,8 +21,8 @@ let g:colors_name = "hemisu"
 " Define reusable colors
 let s:black            = { "gui": "#000000", "cterm": "16"  }
 let s:white            = { "gui": "#FFFFFF", "cterm": "231" }
-let s:almostWhite      = { "gui": "#EEEEEE", "cterm": "255" }
-let s:almostBlack      = { "gui": "#111111", "cterm": "233" }
+let s:almostWhite      = { "gui": "#EEEEEE", "cterm": "254" }
+let s:almostBlack      = { "gui": "#111111", "cterm": "234" }
 let s:middleDarkGrey   = { "gui": "#777777", "cterm": "241" }
 let s:middleLightGrey  = { "gui": "#999999", "cterm": "246" }
 let s:lightGrey        = { "gui": "#BBBBBB", "cterm": "249" }
@@ -32,6 +32,9 @@ let s:darkPink         = { "gui": "#63001C", "cterm": "88"  }
 let s:middleDarkPink   = { "gui": "#FF0055", "cterm": "197" }
 let s:middleLightPink  = { "gui": "#D65E76", "cterm": "167" }
 let s:lightPink        = { "gui": "#FFAFAF", "cterm": "217" }
+
+let s:darkMagenta      = { "gui": "#63001C", "cterm": "97"  }
+let s:lightMagenta     = { "gui": "#63001C", "cterm": "88"  }
 
 let s:darkBlue         = { "gui": "#005F87", "cterm": "24"  }
 let s:middleDarkBlue   = { "gui": "#538192", "cterm": "24"  }
@@ -65,6 +68,7 @@ if &background == "dark"
   let s:faintRed   = s:darkPink
   let s:faintGreen = s:darkGreen
   let s:faintBlue  = s:darkBlue
+  let s:magenta    = s:darkMagenta
 else
   " Light theme
   let s:bg         = s:white
@@ -83,6 +87,7 @@ else
   let s:faintRed   = s:lightPink
   let s:faintGreen = s:lightGreen
   let s:faintBlue  = s:lightBlue
+  let s:magenta    = s:lightMagenta
 endif
 
 "}}}
@@ -126,9 +131,9 @@ endif
 call s:h("Normal",       { "fg": s:norm, "bg": s:bg })
 call s:h("NonText",      { "fg": s:subtle })
 call s:h("Cursor",       { "fg": s:bg, "bg": s:accent3 })
-call s:h("Visual",       { "bg": s:faintBlue })
-call s:h("IncSearch",    { "bg": s:faintBlue })
-call s:h("Search",       { "bg": s:faintGreen })
+call s:h("Visual",       { "fg": s:norm, "bg": s:faintBlue })
+call s:h("IncSearch",    { "fg": s:norm, "bg": s:magenta})
+call s:h("Search",       { "fg": s:norm, "bg": s:faintGreen })
 call s:h("StatusLine",   { "fg": s:norm, "bg": s:faint, "gui": "bold", "cterm": "bold" })
 call s:h("StatusLineNC", { "fg": s:dimmed, "bg": s:faint })
 call s:h("SignColumn",   { "fg": s:norm })
