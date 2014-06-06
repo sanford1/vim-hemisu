@@ -22,7 +22,7 @@ let g:colors_name = "hemisu"
 let s:black            = { "gui": "#000000", "cterm": "16"  }
 let s:white            = { "gui": "#FFFFFF", "cterm": "231" }
 let s:almostWhite      = { "gui": "#EEEEEE", "cterm": "254" }
-let s:almostBlack      = { "gui": "#111111", "cterm": "234" }
+let s:almostBlack      = { "gui": "#111111", "cterm": "235" }
 let s:middleDarkGrey   = { "gui": "#777777", "cterm": "241" }
 let s:middleLightGrey  = { "gui": "#999999", "cterm": "246" }
 let s:lightGrey        = { "gui": "#BBBBBB", "cterm": "249" }
@@ -135,7 +135,7 @@ call s:h("Visual",       { "fg": s:norm, "bg": s:faintBlue })
 call s:h("IncSearch",    { "fg": s:norm, "bg": s:magenta})
 call s:h("Search",       { "fg": s:norm, "bg": s:faintGreen })
 call s:h("StatusLine",   { "fg": s:norm, "bg": s:faint, "gui": "bold", "cterm": "bold" })
-call s:h("StatusLineNC", { "fg": s:dimmed, "bg": s:faint })
+call s:h("StatusLineNC", { "fg": s:dimmed, "bg": s:faint})
 call s:h("SignColumn",   { "fg": s:norm })
 call s:h("VertSplit",    { "fg": s:subtle, "bg": s:faint })
 call s:h("TabLine",      { "fg": s:dimmed, "bg": s:faint })
